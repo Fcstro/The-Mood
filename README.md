@@ -1,5 +1,3 @@
-gi
-
 # The-Mood
 
 ## Overview
@@ -13,10 +11,12 @@ gi
 
 ## Features
 
-- **Mood Sharing** – Post and share your current mood.
-- **Community Interaction** – Like, comment, and follow other users.
-- **Personalized Feed** – Curated content based on your connections and interests.
-- **User Profiles** – Customize and manage your personal profile.
+- **Mood Sharing** – Post and share your current mood with customizable emoji reactions.
+- **Community Interaction** – Like, comment, follow other users, and engage in mood-based discussions.
+- **Personalized Feed** – Curated content based on your connections, interests, and emotional patterns.
+- **User Profiles** – Customize and manage your personal profile with mood history tracking.
+- **Real-time Updates** – Instant notifications for interactions and new content.
+- **Privacy Controls** – Manage who can see and interact with your moods.
 
 ---
 
@@ -27,12 +27,17 @@ gi
 - **Node.js** – JavaScript runtime environment.
 - **Express.js** – Lightweight web framework for Node.js.
 - **MySQL** – Relational database system.
+- **JWT** – User authentication and authorization.
+- **Socket.io** – Real-time communication.
+- **bcrypt** – Password hashing.
 
 ### Frontend – The-Mood SPA
 
-- **HTML** – Markup language for structure.
-- **CSS** – Styling for web pages.
-- **JavaScript** – Adds interactivity to the frontend.
+- **HTML5** – Semantic markup structure.
+- **CSS3** – Modern styling with Flexbox and Grid.
+- **JavaScript (ES6+)** – Frontend interactivity.
+- **LocalStorage** – Client-side data persistence.
+- **Fetch API** – RESTful API communication.
 
 ---
 
@@ -43,7 +48,7 @@ The-Mood/
 ├── The_Mood-API/               # Backend API
 │   ├── controllers/            # Request handlers
 │   ├── core/                   # Core logic and services
-│   ├── middlewares/           # Middleware functions
+│   ├── middlewares/            # Middleware functions
 │   ├── models/                 # Database models
 │   ├── routes/                 # API routes
 │   ├── utils/                  # Utility functions
@@ -53,33 +58,25 @@ The-Mood/
 │   ├── the_mood_db.sql         # SQL schema
 │   └── README.md               # API documentation
 │
-├── The_Mood-SPA/              # Frontend SPA
-│   ├── explore/               # Explore page
-│   │   ├── explore.html
-│   │   ├── explore.css
-│   │   └── navigation.js
-│   ├── follower/              # Follower page
-│   │   ├── followers.html
-│   │   ├── style.css
-│   │   └── navigation.js
-│   ├── homepage/              # Homepage
-│   │   ├── homepage.html
-│   │   ├── homepage.css
-│   │   └── navigation.js
-│   ├── auth/                  # Login, signup, password recovery
-│   │   ├── login.html
-│   │   ├── signup.html
-│   │   ├── forgot-password.html
-│   │   └── assets/
-│   │       ├── cld.png
-│   │       └── cld1.png
-│   ├── profile/               # Profile page
-│   ├── settings/              # Settings page
-│   ├── public/                # Public assets
-│   ├── src/                   # SPA core source
-│   └── README.md              # SPA documentation
+├── The_Mood-SPA/               # Frontend SPA
+│   ├── src/                    # SPA core source
+│   │   ├── index.html          # Main HTML file
+│   │   ├── index.js            # Entry JavaScript file
+│   │   ├── main.js             # Main application logic
+│   │   ├── components/         # Reusable UI components
+│   │   ├── controllers/        # Application controllers
+│   │   ├── models/             # Data models
+│   │   ├── routes/             # Frontend routing
+│   │   ├── styles/             # CSS styles
+│   │   ├── utils/              # Utility functions
+│   │   └── layouts/            # Layout templates
+│   ├── public/                 # Public assets
+│   ├── package.json            # SPA dependencies
+│   ├── mocked_up_data.md       # Sample mock data
+│   ├── the_mood_db.sql         # SQL schema
+│   └── README.md               # SPA documentation
 │
-└── README.md                  # Main README
+└── README.md                   # Main README
 ```
 
 ---
@@ -127,7 +124,7 @@ The-Mood/
     ```
 
 2. Open `The_Mood-SPA` in a browser:
-    - You can use a local server like [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) in VS Code.
+    - Use a local server like [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) in VS Code.
     - Or run a static file server (e.g., `npx serve`).
 
 ---
